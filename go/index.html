@@ -1,25 +1,51 @@
 <script type="text/javascript">
-function getParam(key) {
-        var query = window.location.search.substring(1);
-        var key_values = query.split("&");
-        var params = {};
-        key_values.map(function (key_val) {
-            var key_val_arr = key_val.split("=");
-            params[key_val_arr[0]] = key_val_arr[1];
-        });
-        if (typeof params[key] != "undefined") {
-            return params[key];
+    var telegram = 'https://t.me/ulbwa';
+    var instagram = 'https://www.instagram.com/ulbwaa/';
+    var blog = 'https://t.me/ulbwazhine';
+    var kinopoisk = 'https://www.kinopoisk.ru/user/35757501';
+    const partner = 'https://t.me/Ogurchik775';
+    var donate = 'https://www.tinkoff.ru/sl/7ffeONwPk4f';
+
+    function getParam(key) {
+            var query = window.location.search.substring(1);
+            var key_values = query.split("&");
+            var params = {};
+            key_values.map(function (key_val) {
+                var key_val_arr = key_val.split("=");
+                params[key_val_arr[0]] = key_val_arr[1];
+            });
+            if (typeof params[key] != "undefined") {
+                return params[key];
+            }
+            return "";
         }
-        return "";
-    }
 
-var param = getParam("to");
+    const param = getParam("to");
 
-switch(param) {
-  case 'telegram':
-    window.location.replace("https://t.me/ulbwa");
-  default:
-        window.location.replace("https://ulbwa.github.io");
+    switch(param) {
+    case "telegram":
+        window.location.replace(telegram);
+        break
+    case "instagram":
+        window.location.replace(instagram);
+        break
+    case "blog":
+        window.location.replace(blog);
+        break
+    case "kinopoisk":
+        window.location.replace(kinopoisk);
+        break
+    case "partner":
+        window.location.replace(partner);
+        break
+    case "donate":
+        window.location.replace(donate);
+        break
+    default:
+        window.location.replace('https://ulbwa.github.io');
+        break
+
+
 }
 
 </script>
