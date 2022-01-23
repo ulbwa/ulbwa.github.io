@@ -1,19 +1,25 @@
 <script type="text/javascript">
-function getParam ( sname )
-{
-  var params = location.search.substr(location.search.indexOf("?")+1);
-  var sval = "";
-  params = params.split("&");
-    // split param and value into individual pieces
-    for (var i=0; i<params.length; i++)
-       {
-         temp = params[i].split("=");
-         if ( [temp[0]] == sname ) { sval = temp[1]; }
-       }
-  return sval;
-}
+function getParam(key) {
+        var query = window.location.search.substring(1);
+        var key_values = query.split("&");
+        var params = {};
+        key_values.map(function (key_val) {
+            var key_val_arr = key_val.split("=");
+            params[key_val_arr[0]] = key_val_arr[1];
+        });
+        if (typeof params[key] != "undefined") {
+            return params[key];
+        }
+        return "";
+    }
 
 var param = getParam("to");
-console.log(param);
+
+switch(param) {
+  case 'telegram':
+    window.location.replace("https://t.me/ulbwa");
+  default:
+        window.location.replace("https://ulbwa.github.io");
+}
 
 </script>
