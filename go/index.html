@@ -5,6 +5,7 @@
     const kinopoisk = 'https://www.kinopoisk.ru/user/35757501';
     const partner = 'https://t.me/Ogurchik775';
     const donate = 'https://www.tinkoff.ru/sl/7ffeONwPk4f';
+    const github = 'https://github.com/ulbwazhine';
 
     function getParam(key) {
             var query = window.location.search.substring(1);
@@ -40,6 +41,9 @@
         break
     case "donate":
         window.location.replace(donate);
+        break
+    case "github":
+        window.location.replace(github);
         break
     default:
         window.location.replace('https://ulbwa.github.io');
