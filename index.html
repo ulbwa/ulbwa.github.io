@@ -1,6 +1,10 @@
 <head>
     <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"></script>
     <meta charset="utf-8">
+    <title>ulbwa.xyz</title>
+    <link href="https://raw.githubusercontent.com/ulbwa/ulbwa/main/static/favico.jpg" type="image/x-icon" rel="icon"/>
+    <meta property="og:title" content="ulbwa.xyz">
+    <meta property="og:description" content="ulbwa's main page">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
@@ -10,34 +14,21 @@
 
 <script>
     const language = navigator.language;
-    const config = fetch("https://ulbwa.github.io/config.json");
-    let index_path = config['index']['default'];
 
-    if (config['index'].hasOwnProperty(language)) {
-        index_path = config['index'][language];
-    }
+    function getContent() {
+        switch (language) {
+            case "ru":
+                return "https://raw.githubusercontent.com/ulbwa/ulbwa/main/README_RU.md"
+            default:
+                return "https://raw.githubusercontent.com/ulbwa/ulbwa/main/README.md"}}
+
 
     window.onload = function () {
-        document.title = config['meta']['title'];
-        const title = document.createElement('meta');
-        title.property = 'og:title';
-        title.content = config['meta']['title'];
-        document.getElementsByTagName('head')[0].appendChild(title);
-
-        const description = document.createElement('meta');
-        description.property = 'og:description';
-        description.content = config['meta']['description'];
-        document.getElementsByTagName('head')[0].appendChild(description);
-
-        const favicon = document.createElement('link');
-        favicon.type = 'image/x-icon';
-        favicon.rel = 'icon';
-        favicon.href = config['meta']['favicon'];
-        document.getElementsByTagName('head')[0].appendChild(favicon);
-
-        const md = document.createElement("zero-md");
-        md.setAttribute("src", index_path);
-        md.setAttribute("no-shadow", "");
-        document.getElementById("mdcontainer").append(md);
+        var md = document.createElement("zero-md")
+        md.setAttribute("src", getContent())
+        md.setAttribute("no-shadow", "")
+        document.getElementById("mdcontainer").append(md)
     }
+
 </script>
+
