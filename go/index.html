@@ -1,55 +1,26 @@
 <script type="text/javascript">
-    const telegram = 'https://t.me/ulbwa';
-    const instagram = 'https://www.instagram.com/ulbwaa/';
-    const blog = 'https://t.me/ulbwazhine';
-    const kinopoisk = 'https://www.kinopoisk.ru/user/35757501';
-    const partner = 'https://t.me/Ogurchik775';
-    const donate = 'https://www.tinkoff.ru/sl/7ffeONwPk4f';
-    const github = 'https://github.com/ulbwa';
-
     function getParam(key) {
-            var query = window.location.search.substring(1);
-            var key_values = query.split("&");
-            var params = {};
-            key_values.map(function (key_val) {
-                var key_val_arr = key_val.split("=");
-                params[key_val_arr[0]] = key_val_arr[1];
+        const query = window.location.search.substring(1);
+        const key_values = query.split("&");
+        const params = {};
+        key_values.map(function (key_val) {
+            const key_val_arr = key_val.split("=");
+            params[key_val_arr[0]] = key_val_arr[1];
             });
-            if (typeof params[key] != "undefined") {
-                return params[key];
-            }
-            return "";
+        if (typeof params[key] != "undefined") {
+            return params[key];
         }
+        return "";
+    }
 
+    const links = fetch("https://ulbwa.github.io/config.json")['links'];
     const param = getParam("to");
+    let link_path = links['default'];
 
-    switch(param) {
-    case "telegram":
-        window.location.replace(telegram);
-        break
-    case "instagram":
-        window.location.replace(instagram);
-        break
-    case "blog":
-        window.location.replace(blog);
-        break
-    case "kinopoisk":
-        window.location.replace(kinopoisk);
-        break
-    case "partner":
-        window.location.replace(partner);
-        break
-    case "donate":
-        window.location.replace(donate);
-        break
-    case "github":
-        window.location.replace(github);
-        break
-    default:
-        window.location.replace('https://ulbwa.github.io');
-        break
+    if (links.hasOwnProperty(param)) {
+        link_path = links[param];
+    }
 
-
-}
+    window.location.replace(link_path);
 
 </script>
