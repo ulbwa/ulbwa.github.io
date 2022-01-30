@@ -6,6 +6,7 @@
     const manager = 'https://t.me/Ogurchik775';
     const donate = 'https://www.tinkoff.ru/cf/3INgFbIpo9R';
     const github = 'https://github.com/ulbwa';
+    const lastfm = 'https://github.com/lastfm';
 
     function getParam(key) {
             var query = window.location.search.substring(1);
@@ -44,6 +45,9 @@
         break
     case "github":
         window.location.replace(github);
+        break
+    case "lastfm":
+        window.location.replace(lastfm);
         break
     default:
         window.location.replace('https://ulbwa.github.io');
