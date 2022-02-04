@@ -1,0 +1,40 @@
+<head>
+    <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"></script>
+    <meta charset="utf-8">
+    <title>ulbwa.xyz</title>
+    <link href="https://raw.githubusercontent.com/ulbwa/ulbwa/main/static/favico.jpg" type="image/x-icon" rel="icon"/>
+    <meta property="og:title" content="ulbwa.xyz">
+    <meta property="og:description" content="ulbwa's main page">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body id="mdcontainer" style="padding:15px; max-width: 900px; vertical-align: middle; margin:0 auto;">
+
+</body>
+
+<script>
+    const language = navigator.language;
+
+    function getParam(key) {
+            var query = window.location.search.substring(1);
+            var key_values = query.split("&");
+            var params = {};
+            key_values.map(function (key_val) {
+                var key_val_arr = key_val.split("=");
+                params[key_val_arr[0]] = key_val_arr[1];
+            });
+            if (typeof params[key] != "undefined") {
+                return params[key];
+            }
+            return "index.md";
+        }
+
+    window.onload = function () {
+        var md = document.createElement("zero-md")
+        md.setAttribute("src", '/homework/computer/' + getParam('src'))
+        md.setAttribute("no-shadow", "")
+        document.getElementById("mdcontainer").append(md)
+    }
+
+</script>
+
