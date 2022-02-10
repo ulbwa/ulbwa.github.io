@@ -1,16 +1,18 @@
-<h1 align="center">Информационный портал «Все о компьютерах»</h1>
+<h1 align="center" style="color: #0366d6;">Информационный портал «Все о компьютерах»</h1>
 
 > Материал взят из Википедии — свободной энциклопедии. [Перейти в источник](https://ru.wikipedia.org/wiki/Компьютер).
  
 > На сайте используется таблица стилей, я сам это написал, умоляю поставьте пять пожалуйста
 
-## Статьи на сайте:
- * **[Как включить компьютер](/homework/computer?src=404.md)** — Автор: Владимир Владимирович Путин
- * **[Как выключить компьютер](/homework/computer?src=404.md)** — Автор: Владимир Владимирович Путин
- * **[Как сломать компьютер](/homework/computer?src=404.md)** — Автор: Владимир Владимирович Путин
- * **[Как отремонтировать компьютер](/homework/computer?src=404.md)** — Автор: Владимир Владимирович Путин
+## Каталог:
+ * **[Программы](/homework/computer?src=apps.md)**
+ * **[Словарь](/homework/computer?src=dictionary.md)**
+ * **[Комплектующие](/homework/computer?src=hardware.md)**
+ * **[Анкета](/homework/computer?src=form.md)**
 
 Мы добавляем статьи в каталог каждый день!!! (Шутка.) Статей никогда не будет!
+
+<a href="mailto:ulbwa@icloud.com">Обратная связь по E-mail</a>
 
 ## Компьютер как ЭВМ
 <img style="display:inline; float: right; padding-right: 10px" width="200px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/ThinkCentre_S50.jpg/200px-ThinkCentre_S50.jpg">
