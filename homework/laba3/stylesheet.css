@@ -4,6 +4,10 @@ html {
     color: #24292E;
 }
 
+p {
+    text-indent: 2em;
+}
+
 a:link {
     color: #1b4965
 }
@@ -63,6 +67,7 @@ td {
 }
 
 .dash-wrapper {
+    text-indent: 0;
     width: 100%;
     box-sizing: border-box;
     background: #cae9ff;
@@ -71,7 +76,12 @@ td {
     padding: 5px 10px;
 }
 
+.dash-wrapper p {
+    text-indent: 0;
+}
+
 .quote-wrapper {
+    text-indent: 0;
     width: 100%;
     box-sizing: border-box;
     background: #bee9e8;
@@ -80,9 +90,18 @@ td {
     padding: 5px 10px;
 }
 
+.quote-wrapper p {
+    text-indent: 0;
+}
+
 .folder-wrapper {
+    text-indent: 0;
     overflow: auto;
     white-space: nowrap;
+}
+
+.folder-wrapper p {
+    text-indent: 0;
 }
 
 .folder-wrapper .folder-item {
