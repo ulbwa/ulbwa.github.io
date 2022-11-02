@@ -12,148 +12,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
+    <link href="./stylesheet.css" rel="stylesheet">
 </head>
-<style>
-    html {
-        background: #FFFFFF;
-        font-family: 'Roboto', sans-serif;
-        color: #24292E;
-    }
-
-    a:link {
-        color: #1b4965
-    }
-
-    a:visited {
-        color: #1b4965
-    }
-
-    p:link {
-        color: #1b4965
-    }
-
-    p:visited {
-        color: #1b4965
-    }
-
-    h1 {
-        padding-bottom: 10px;
-        border-bottom: 1px solid #EAECEF;
-    }
-
-    h2 {
-        padding-bottom: 10px;
-        border-bottom: 1px solid #EAECEF;
-    }
-
-    h3 {
-        padding-bottom: 10px;
-        border-bottom: 1px solid #EAECEF;
-    }
-
-    body {
-        padding: 12px;
-        max-width: 900px;
-        vertical-align: middle;
-        margin: 0 auto;
-    }
-
-    table {
-        border-spacing: 0;
-        border-collapse: collapse;
-        margin-top: 0;
-        margin-bottom: 0;
-        display: block;
-        width: 100%;
-        overflow: auto;
-    }
-
-    tr:nth-child(even) {
-        background-color: #EAECEF;
-    }
-
-    td {
-        padding: 5px;
-        border: 1px solid #EAECEF;
-    }
-
-    .dash-wrapper {
-        width: 100%;
-        box-sizing: border-box;
-        background: #cae9ff;
-        border: 3px dashed #5fa8d3;
-        border-radius: 10px;
-        padding: 5px 10px;
-    }
-
-    .quote-wrapper {
-        width: 100%;
-        box-sizing: border-box;
-        background: #bee9e8;
-        border-left: 3px solid #62b6cb;
-        border-radius: 0px 10px 10px 0px;
-        padding: 5px 10px;
-    }
-
-    .folder-wrapper {
-        overflow: auto;
-        white-space: nowrap;
-    }
-
-    .folder-wrapper .folder-item {
-        display: inline-grid;
-        color: 24292E;
-        text-decoration: none;
-        width: 250px;
-        margin-right: 10px;
-        padding: 5px;
-        border-radius: 10px;
-        transition: 0.3s;
-    }
-
-    .folder-wrapper .folder-item p {
-        white-space: break-spaces;
-        box-sizing: border-box;
-    }
-
-    .folder-wrapper .folder-item:hover {
-        background: #EAECEF;
-    }
-
-    .folder-wrapper .folder-item .img {
-        margin: 0;
-        width: 250px;
-        height: 150px;
-        background: var(--src);
-        background-size: cover;
-        background-position: center center;
-        border-radius: 10px;
-        transition: 0.3s;
-        color: transparent;
-    }
-
-    .folder-wrapper .folder-item .img h2 {
-        border: 0;
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        height: 100%;
-        border-radius: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: 0.3s;
-    }
-
-    .folder-wrapper .folder-item:hover .img h2 {
-        color: #FEFEFE;
-        background: rgba(0, 0, 0, 0.5);
-    }
-
-    .folder-wrapper .folder-item p {
-        margin: 5px 0px 0px 0px;
-    }
-</style>
 
 <body>
     <div class="wrapper">
@@ -162,9 +22,9 @@
         </h1>
         <p class="dash-wrapper">
             Текст страниц основан на материале реферата. Наглядную демонстрацию выполнения заданий можно увидеть в папке
-            "Задания", либо по <a href="/homework">ссылке</a>. Сайт выполнил Глинских И.А., группа ИТ0900022Б.
+            "Задания", либо по <a href="./homework">ссылке</a>. Сайт выполнил Глинских И.А., группа ИТ0900022Б.
         </p>
-        <img style="float: right;" src="cpu.png" width="150px">
+        <img style="float: right;" src="./cpu.png" width="150px">
         <p>
             Современную жизнь человека невозможно представить без информационных технологий, а созданием и обеспечением
             программного обеспечения для поддержания работы современных информационных систем занимается программная
@@ -187,35 +47,35 @@
         </h2>
         <div class="folder-wrapper">
             <a href="homework/" class="folder-item">
-                <div class="img" style="--src: url('homework/cover.jpg');">
+                <div class="poster" style="--src: url('./homework/cover.jpg');">
                     <h2>Читать</h2>
                 </div>
                 <p><b>Наглядная демонстрация решения задач</b></p>
                 <p>Я старался</p>
             </a>
             <a href="software_engineering/" class="folder-item">
-                <div class="img" style="--src: url('software_engineering/cover.jpg');">
+                <div class="poster" style="--src: url('./software_engineering/cover.jpg');">
                     <h2>Читать</h2>
                 </div>
                 <p><b>Определение программной инженерии</b></p>
                 <p>Низкие и высокие языки программирования</p>
             </a>
             <a href="/folder1" class="folder-item">
-                <div class="img" style="--src: url('history_of_software_engineering/cover.jpg');">
+                <div class="poster" style="--src: url('./history_of_software_engineering/cover.jpg');">
                     <h2>Читать</h2>
                 </div>
                 <p><b>История возникновения программной инженерии и программирования</b></p>
                 <p>Ключевые даты и персоны</p>
             </a>
             <a href="/folder1" class="folder-item">
-                <div class="img" style="--src: url('modern_programming_languages/cover.jpg');">
+                <div class="poster" style="--src: url('./modern_programming_languages/cover.jpg');">
                     <h2>Читать</h2>
                 </div>
                 <p><b>Современные языки программирования</b></p>
                 <p>Несколько слов о каждом</p>
             </a>
             <a href="/folder1" class="folder-item">
-                <div class="img" style="--src: url('most_popular_programming_languages/cover.png');">
+                <div class="poster" style="--src: url('./most_popular_programming_languages/cover.png');">
                     <h2>Читать</h2>
                 </div>
                 <p><b>Рейтинг самых популярных языков программирования по мнению Habr</b></p>

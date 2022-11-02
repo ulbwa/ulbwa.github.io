@@ -1,0 +1,148 @@
+html {
+    background: #FFFFFF;
+    font-family: 'Roboto', sans-serif;
+    color: #24292E;
+}
+
+a:link {
+    color: #1b4965
+}
+
+a:visited {
+    color: #1b4965
+}
+
+p:link {
+    color: #1b4965
+}
+
+p:visited {
+    color: #1b4965
+}
+
+h1 {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #EAECEF;
+}
+
+h2 {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #EAECEF;
+}
+
+h3 {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #EAECEF;
+}
+
+body {
+    padding: 12px;
+    max-width: 900px;
+    vertical-align: middle;
+    margin: 0 auto;
+}
+
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+    margin-top: 0;
+    margin-bottom: 0;
+    display: block;
+    width: 100%;
+    overflow: auto;
+}
+
+tr:nth-child(even) {
+    background-color: #EAECEF;
+}
+
+td {
+    padding: 5px;
+    border: 1px solid #EAECEF;
+}
+
+.dash-wrapper {
+    width: 100%;
+    box-sizing: border-box;
+    background: #cae9ff;
+    border: 3px dashed #5fa8d3;
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+
+.quote-wrapper {
+    width: 100%;
+    box-sizing: border-box;
+    background: #bee9e8;
+    border-left: 3px solid #62b6cb;
+    border-radius: 0px 10px 10px 0px;
+    padding: 5px 10px;
+}
+
+.folder-wrapper {
+    overflow: auto;
+    white-space: nowrap;
+}
+
+.folder-wrapper .folder-item {
+    display: inline-grid;
+    color: 24292E;
+    text-decoration: none;
+    width: 250px;
+    margin-right: 10px;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.folder-wrapper .folder-item p {
+    white-space: break-spaces;
+    box-sizing: border-box;
+}
+
+.folder-wrapper .folder-item:hover {
+    background: #EAECEF;
+}
+
+.folder-wrapper .folder-item .poster {
+    margin: 0;
+    width: 250px;
+    height: 150px;
+    background: var(--src);
+    background-size: cover;
+    background-position: center center;
+    border-radius: 10px;
+    transition: 0.3s;
+    color: transparent;
+}
+
+.folder-wrapper .folder-item .poster h2 {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.folder-wrapper .folder-item:hover .poster h2 {
+    color: #FEFEFE;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.folder-wrapper .folder-item p {
+    margin: 5px 0px 0px 0px;
+}
+
+.cover-wrapper {
+    width: 100%;
+    height: 350px;
+
+    background: var(--src);
+    background-size: cover;
+    background-position: center center;
+}
