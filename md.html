@@ -1,20 +1,18 @@
-<html>
+<head>
+    <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
 
 <body id="mdcontainer" style="padding:15px; max-width: 900px; vertical-align: middle; margin:0 auto;">
-
 </body>
-
 <script>
     let url = new URL(window.location);
     let searchParams = new URLSearchParams(url.search);
-
     window.onload = function () {
         var md = document.createElement("zero-md")
         md.setAttribute("src", searchParams.get('url'))
         md.setAttribute("no-shadow", "")
         document.getElementById("mdcontainer").append(md)
     }
-
 </script>
-
-</html>
