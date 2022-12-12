@@ -1,0 +1,20 @@
+<html>
+
+<body id="mdcontainer" style="padding:15px; max-width: 900px; vertical-align: middle; margin:0 auto;">
+
+</body>
+
+<script>
+    let url = new URL(window.location);
+    let searchParams = new URLSearchParams(url.search);
+
+    window.onload = function () {
+        var md = document.createElement("zero-md")
+        md.setAttribute("src", searchParams.get('url'))
+        md.setAttribute("no-shadow", "")
+        document.getElementById("mdcontainer").append(md)
+    }
+
+</script>
+
+</html>
